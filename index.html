@@ -8,348 +8,166 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-.profile-img{
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid white;
-animation: float 3s ease-in-out infinite;
-box-shadow:0 0 25px rgba(0,0,0,0.4);
-}
-.cv{
-padding:50px 25px;
-background:#1a1a1a;
-color:white;
-text-align:center;
-border-radius:25px;
-margin:40px 20px;
-line-height:2.2;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
-}
-@keyframes float{
-0%{
-transform:translateY(0px);
-}
-50%{
-transform:translateY(-15px);
-}
-100%{
-transform:translateY(0px);
-}.cv
-padding:50px 25px;
-background:#1a1a1a;
-color:white;
-text-align:center;
-border-radius:25px;
-margin:40px 20px;
-line-height:2.2;
-box-shadow:0 0 20px rgba(0,0,0,0.4);
-}
-}
+
+/* الأساس */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Cairo',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
 }
 
 body{
-background:linear-gradient(-45deg,#000000,#0d0000,#1a0000,#330000);
+background:linear-gradient(-45deg,#000,#1a0000,#330000);
 background-size:400% 400%;
 animation:gradientBG 12s ease infinite;
 color:white;
 overflow-x:hidden;
 }
 
+/* خلفية متحركة */
 @keyframes gradientBG{
-0%{
-background-position:0% 50%;
-}
-50%{
-background-position:100% 50%;
-}
-100%{
-background-position:0% 50%;
-}
-}
-}
-
-@keyframes gradientBG{
-0%{
-background-position:0% 50%;
-}
-50%{
-background-position:100% 50%;
-}
-100%{
-background-position:0% 50%;
-}
-}
-}
-
-
-
-
-
-}@keyframes gradientBG{
-0%{
-background-position:0% 50%;
-}
-50%{
-background-position:100% 50%;
-}
-100%{
-background-position:0% 50%;
-}
-}
-
-    
-
-}
-
-/* الخلفية */
-
-body::before{
-    content:"";
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:url("gym.jpg") center/cover no-repeat;
-    opacity:0.12;
-    z-index:-1;
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 /* القائمة */
-
 nav{
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
 }
 
 .logo{
-    color:#00ff88;
-    font-size:28px;
-    font-weight:bold;
+color:#00ff88;
+font-size:28px;
+font-weight:bold;
 }
 
-.menu a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    transition:0.3s;
-}
-
-.menu a:hover{
-    color:#00ff88;
-}
-
-/* الصفحة الرئيسية */
-
+/* الهيرو */
 .hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:80px;
-    padding:50px 8%;
-    flex-wrap:wrap;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding:60px 8%;
+flex-wrap:wrap;
 }
 
-/* الصورة الدائرية */
-
+/* الصورة */
 .hero-image{
-    position:relative;
-    width:320px;
-    height:320px;
-    border-radius:50%;
-    overflow:hidden;
-    border:5px solid #00ff88;
-    box-shadow:0 0 40px #00ff88;
-    animation:glow 3s infinite alternate;
+width:320px;
+height:320px;
+border-radius:50%;
+overflow:hidden;
+border:5px solid #00ff88;
+box-shadow:0 0 40px #00ff88;
+animation:float 3s ease-in-out infinite;
 }
 
 .hero-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:top;
-}
-    
-    
-
-
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center 20%;
 }
 
-@keyframes glow{
-    from{
-        box-shadow:0 0 20px #00ff88;
-    }
-
-    to{
-        box-shadow:0 0 50px #00ff88;
-    }
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
 }
 
 /* النص */
-
 .hero-text{
-    max-width:550px;
-}
-
-.hero-text h3{
-    color:#00ff88;
-    font-size:30px;
+max-width:500px;
 }
 
 .hero-text h1{
-    font-size:70px;
-    margin:10px 0;
+font-size:60px;
+margin:10px 0;
 }
 
 .hero-text h2{
-    color:#00ff88;
-    font-size:38px;
-    margin-bottom:20px;
+color:#00ff88;
+margin-bottom:10px;
 }
 
 .hero-text p{
-    color:#cccccc;
-    line-height:2;
-    font-size:20px;
+color:#ccc;
+line-height:2;
 }
 
 /* الخدمات */
-
 .services{
-    padding:80px 8%;
-    text-align:center;
+padding:80px 8%;
+text-align:center;
 }
 
 .services h2{
-    font-size:55px;
-    margin-bottom:60px;
+font-size:45px;
+margin-bottom:40px;
 }
 
 .services h2 span{
-    color:#00ff88;
+color:#00ff88;
 }
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
-    background:#111;
-    padding:40px 30px;
-    border-radius:25px;
-    border:1px solid rgba(255,255,255,0.1);
-    transition:0.4s;
-    box-shadow:0 0 20px rgba(0,255,136,0.15);
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 35px rgba(0,255,136,0.4);
+background:#111;
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,255,136,0.2);
 }
 
 .card-icon{
-    width:90px;
-    height:90px;
-    background:#00ff88;
-    color:black;
-    font-size:40px;
-    border-radius:50%;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:25px;
-}
-
-.card h3{
-    font-size:35px;
-    margin-bottom:20px;
-}
-
-.card p{
-    color:#cccccc;
-    line-height:2;
-    font-size:18px;
+font-size:40px;
+margin-bottom:15px;
 }
 
 /* التواصل */
-
 .contact{
-    margin:80px 8%;
-    background:#0e0e0e;
-    border-radius:35px;
-    padding:50px;
-    text-align:center;
-    border:1px solid rgba(0,255,136,0.2);
-    box-shadow:0 0 25px rgba(0,255,136,0.2);
-}
-
-.contact h2{
-    font-size:55px;
-    margin-bottom:15px;
-}
-
-.contact h2 span{
-    color:#00ff88;
-}
-
-.contact p{
-    font-size:35px;
-    margin-bottom:30px;
+text-align:center;
+padding:60px;
+margin:60px 8%;
+background:#111;
+border-radius:25px;
 }
 
 .whatsapp{
-    display:inline-block;
-    padding:18px 45px;
-    background:#00ff88;
-    color:black;
-    text-decoration:none;
-    border-radius:15px;
-    font-size:24px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.whatsapp:hover{
-    transform:scale(1.05);
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:#00ff88;
+color:black;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
 }
 
 /* الفوتر */
-
 footer{
-    text-align:center;
-    padding:25px;
-    color:#888;
+text-align:center;
+padding:20px;
+color:#aaa;
 }
 
-/* الهاتف */
-
-@media(max-width:900px){
-
-.hero{
-    text-align:center;
+/* الشهادات */
+.cv-info{
+padding:40px 8%;
+line-height:2;
 }
 
-.hero-text h1{
-    font-size:50px;
-}
-
-.hero-image{
-    width:300px;
-    height:300px;
-}
-
+.cv-info h3{
+color:#00ff88;
+margin-top:20px;
 }
 
 </style>
@@ -357,154 +175,101 @@ footer{
 
 <body>
 
-<!-- القائمة -->
-
 <nav>
-
-<div class="logo">
-حسن شهابي
-</div>
-
-<div class="menu">
-
-
-
-</div>
-
+<div class="logo">حسن شهابي</div>
 </nav>
 
-
-
+<!-- HERO -->
 <section class="hero">
 
 <div class="hero-image">
-
-<!-- ضع اسم صورتك هنا -->
-<img src="1779905505625.jpg" alt="حسن شهابي" class="profile-img">
-
+<img src="1779905505625.jpg" alt="حسن شهابي">
 </div>
 
 <div class="hero-text">
-
-<h3>الكابتن</h3>
-
+<h2>الكابتن</h2>
 <h1>حسن شهابي</h1>
-
 <h2>مدرب كمال أجسام</h2>
 
 <p>
-أساعدك على تحقيق أفضل نسخة من نفسك من خلال
-برامج تدريب احترافية وأنظمة غذائية متكاملة
-تناسب هدفك وجسمك للوصول إلى نتائج قوية
-وحقيقية بطريقة صحية ومدروسة.
+أساعدك على تحقيق أفضل نسخة من نفسك عبر برامج تدريب
+وغذاء احترافية للوصول لنتائج قوية وصحية.
 </p>
-
 </div>
 
 </section>
 
-
-
+<!-- الخدمات -->
 <section class="services">
 
-<h2>
-الخدمات <span>التدريبية</span>
-</h2>
+<h2>الخدمات <span>التدريبية</span></h2>
 
 <div class="cards">
 
 <div class="card">
-
-<div class="card-icon">
-🔥
-</div>
-
+<div class="card-icon">🔥</div>
 <h3>نظام تنحيف مريح</h3>
-
-<p>
-برنامج تنحيف متوازن يساعدك على خسارة الوزن
-بطريقة صحية ومريحة بدون حرمان مع متابعة
-مستمرة للوصول إلى أفضل نتيجة.
-</p>
-
+<p>برنامج تنحيف متوازن بدون حرمان مع متابعة مستمرة.</p>
 </div>
 
 <div class="card">
-
-<div class="card-icon">
-🥗
-</div>
-
+<div class="card-icon">🥗</div>
 <h3>نظام غذائي متكامل</h3>
-
-<p>
-خطة غذائية احترافية تحتوي على وجبات مدروسة
-لزيادة النشاط وتحسين اللياقة وبناء جسم قوي
-ومتناسق.
-</p>
-
+<p>خطة غذائية احترافية لزيادة الطاقة وبناء جسم قوي.</p>
 </div>
 
 <div class="card">
-
-<div class="card-icon">
-🏋️
-</div>
-
-<h3>خطة تدريبية للضخامة</h3>
-
-<p>
-برنامج تدريبي احترافي لزيادة الكتلة العضلية
-وبناء جسم متناسق بنتائج جميلة خلال 3 أشهر.
-</p>
-
+<div class="card-icon">💪</div>
+<h3>خطة ضخامة</h3>
+<p>برنامج لزيادة الكتلة العضلية خلال 3 أشهر.</p>
 </div>
 
 </div>
 
 </section>
 
+<!-- معلومات إضافية -->
+<section class="cv-info">
 
+<h3>الشهادات</h3>
+<p>
+✔ مستوى أول كمال أجسام<br>
+✔ مستوى أول قوة بدنية<br>
+✔ مستوى أول لياقة بدنية
+</p>
 
+<h3>التحكيم</h3>
+<p>
+✔ حكم درجة أولى كمال أجسام<br>
+✔ حكم درجة أولى لياقة بدنية<br>
+✔ حكم درجة ثانية قوة بدنية
+</p>
+
+<h3>الخبرة</h3>
+<p>
+✔ خبرة 10 سنوات<br>
+✔ عضو في الاتحاد الرياضي السوري<br>
+✔ خبير في الهرمونات و PTS
+</p>
+
+</section>
+
+<!-- تواصل -->
 <section class="contact">
 
-<h2>
-تواصل <span>معنا</span>
-</h2>
-
-<p>
-
-</p>
+<h2>تواصل معي</h2>
 
 <a class="whatsapp"
 href="https://wa.me/905348824789"
-target="_blank"
-dir="ltr">
-
-مراسلة واتساب
-
+target="_blank">
+📱 مراسلة واتساب
 </a>
 
-
-
-
-
-
 </section>
-حاصل على شهادة مستوى اول في تدريب كمال الاجسام 
-حاصل على شهادة مستوى اول في القوة البدنية
-حاصل على شهادة مستوى اول في لايقة الاجسام 
-حكم درجة اولى في كمال الاجسام 
-حكم درجة اولى في الياقة البدنية 
-حكم درجة تانية في القوة البدنية 
-عضو في الاتحاد الرياضي السوري 
-خبرة 10 سنوات 
-خبير في الهرمونات والPTS
+
 <footer>
-
 © جميع الحقوق محفوظة للكابتن حسن شهابي
-
 </footer>
 
 </body>
-  </html>
+</html>
