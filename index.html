@@ -55,11 +55,24 @@ box-shadow:0 0 20px rgba(0,0,0,0.4);
 }
 
 body{
-background:linear-gradient(-45deg,#ff0080,#8000ff,#00ffe1);
+background:linear-gradient(-45deg,#000000,#330000,#990000,#ff0000);
 background-size:400% 400%;
 animation:gradientBG 12s ease infinite;
 color:white;
 overflow-x:hidden;
+}
+
+@keyframes gradientBG{
+0%{
+background-position:0% 50%;
+}
+50%{
+background-position:100% 50%;
+}
+100%{
+background-position:0% 50%;
+}
+}
 }
 
 
