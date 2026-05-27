@@ -56,7 +56,7 @@ flex-wrap:wrap;
 }
 
 /* الصورة */
-<img src="https://raw.githubusercontent.com/kaushka9/Hasan/main/1779905505625.jpg" alt="حسن شهابي">
+.hero-image{
 width:320px;
 height:320px;
 border-radius:50%;
@@ -64,10 +64,9 @@ overflow:hidden;
 border:5px solid #00ff88;
 box-shadow:0 0 40px #00ff88;
 animation:float 3s ease-in-out infinite;
-
-max-width:90vw;
-max-height:90vw;
-margin:auto;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
 .hero-image img{
@@ -76,6 +75,7 @@ height:100%;
 object-fit:cover;
 object-position:center 20%;
 display:block;
+}
 }
 }
 
